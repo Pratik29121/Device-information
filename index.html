@@ -1,0 +1,51 @@
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>User Information</title> 
+        <link href="p.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+    <h5>by Print("PRS")</h5>
+    <h1>Information user</h1>
+        <h3>Show Browser And Version</h3>
+       <p id="brows"></p>
+<script>document.getElementById("brows").innerHTML =
+            "Browser Version: " + navigator.appVersion </script>
+            <hr>
+       <h3>Show Device Availabel</h3>
+     <p id="device"></p>  <script>document.getElementById("device").innerHTML =
+            "Screen Width: " + screen.width + "<br>" +
+            "Screen Height: " + screen.height + "<br><br>" +
+            "Availabel Screen Width: " + screen.availWidth + "<br>" +
+            "Availabel Screen Height: " + screen.availHeight + "<br>"
+</script>
+<hr>
+<h3>Show Vibrate And Sound</h3>
+<p>Vibration : <span>On</span> / <i>Off</i><br /><br />Sound vl. : <span>On</span> /  <i>Off</i></p>
+<hr>
+<h3>Show Battery And Charge</h3>
+<h4 id="info"></h4><br />
+<script src="p.js"></script>
+<div id="bat">
+        <div id="bframe">
+        <div id="pil"></div>
+            <div id="charge"></div>
+            
+        </div>
+        
+        <em></em>
+        </div>
+<script>$(document).ready(function(){ navigator.getBattery().then(battery=>console.log(battery.level)); {
+    var level = battery.level;
+    var charge = document.getElementById("charge");
+    $("em").text(level * 100 + " %");
+    charge.style.height = level * 100 + "%";
+};
+;</script>
+<p class="oc">➡️ <a href=""></a> ⬅️</p>
+    </body>
+<html>
